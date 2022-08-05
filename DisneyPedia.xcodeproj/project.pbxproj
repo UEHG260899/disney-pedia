@@ -12,7 +12,12 @@
 		A4E3F0B3289CB95900BAF6F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0B2289CB95900BAF6F1 /* AppDelegate.swift */; };
 		A4E3F0BC289CB95A00BAF6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E3F0BB289CB95A00BAF6F1 /* Assets.xcassets */; };
 		A4E3F0BF289CB95A00BAF6F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E3F0BD289CB95A00BAF6F1 /* LaunchScreen.storyboard */; };
-		A4E3F0CA289CB95A00BAF6F1 /* DisneyPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0C9289CB95A00BAF6F1 /* DisneyPediaTests.swift */; };
+		A4E3F0E9289CBF1000BAF6F1 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0E8289CBF1000BAF6F1 /* Scene.swift */; };
+		A4E3F0EB289CBF6800BAF6F1 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0EA289CBF6800BAF6F1 /* SceneCoordinatorType.swift */; };
+		A4E3F0ED289CC25700BAF6F1 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0EC289CC25700BAF6F1 /* SceneTransitionType.swift */; };
+		A4E3F0F0289CC2AC00BAF6F1 /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0EF289CC2AC00BAF6F1 /* Scene+ViewController.swift */; };
+		A4E3F0F2289CC3D500BAF6F1 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0F1289CC3D500BAF6F1 /* AppConfigurator.swift */; };
+		A4E3F0F6289CC45B00BAF6F1 /* AppConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0F5289CC45B00BAF6F1 /* AppConfiguratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,12 @@
 		A4E3F0BE289CB95A00BAF6F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4E3F0C0289CB95A00BAF6F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4E3F0C5289CB95A00BAF6F1 /* DisneyPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4E3F0C9289CB95A00BAF6F1 /* DisneyPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyPediaTests.swift; sourceTree = "<group>"; };
+		A4E3F0E8289CBF1000BAF6F1 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		A4E3F0EA289CBF6800BAF6F1 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		A4E3F0EC289CC25700BAF6F1 /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
+		A4E3F0EF289CC2AC00BAF6F1 /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
+		A4E3F0F1289CC3D500BAF6F1 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		A4E3F0F5289CC45B00BAF6F1 /* AppConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguratorTests.swift; sourceTree = "<group>"; };
 		AE681D83B303DD801EB7ED76 /* Pods-DisneyPedia-DisneyPediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisneyPedia-DisneyPediaTests.release.xcconfig"; path = "Target Support Files/Pods-DisneyPedia-DisneyPediaTests/Pods-DisneyPedia-DisneyPediaTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF849DC0696A11FA549B9636 /* Pods_DisneyPedia_DisneyPediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DisneyPedia_DisneyPediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5CE928BB966BFB847883B5 /* Pods-DisneyPedia-DisneyPediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisneyPedia-DisneyPediaTests.debug.xcconfig"; path = "Target Support Files/Pods-DisneyPedia-DisneyPediaTests/Pods-DisneyPedia-DisneyPediaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +79,6 @@
 				EF5CE928BB966BFB847883B5 /* Pods-DisneyPedia-DisneyPediaTests.debug.xcconfig */,
 				AE681D83B303DD801EB7ED76 /* Pods-DisneyPedia-DisneyPediaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,6 +105,8 @@
 		A4E3F0B1289CB95900BAF6F1 /* DisneyPedia */ = {
 			isa = PBXGroup;
 			children = (
+				A4E3F0EE289CC29D00BAF6F1 /* Extensions */,
+				A4E3F0E7289CBF0900BAF6F1 /* Scenes */,
 				A4E3F0E2289CB9ED00BAF6F1 /* SupportingFiles */,
 				A4E3F0C0289CB95A00BAF6F1 /* Info.plist */,
 			);
@@ -105,7 +116,7 @@
 		A4E3F0C8289CB95A00BAF6F1 /* DisneyPediaTests */ = {
 			isa = PBXGroup;
 			children = (
-				A4E3F0C9289CB95A00BAF6F1 /* DisneyPediaTests.swift */,
+				A4E3F0F3289CC42700BAF6F1 /* Cases */,
 			);
 			path = DisneyPediaTests;
 			sourceTree = "<group>";
@@ -116,6 +127,41 @@
 				A4E3F0B2289CB95900BAF6F1 /* AppDelegate.swift */,
 				A4E3F0BB289CB95A00BAF6F1 /* Assets.xcassets */,
 				A4E3F0BD289CB95A00BAF6F1 /* LaunchScreen.storyboard */,
+				A4E3F0F1289CC3D500BAF6F1 /* AppConfigurator.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A4E3F0E7289CBF0900BAF6F1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3F0E8289CBF1000BAF6F1 /* Scene.swift */,
+				A4E3F0EA289CBF6800BAF6F1 /* SceneCoordinatorType.swift */,
+				A4E3F0EC289CC25700BAF6F1 /* SceneTransitionType.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A4E3F0EE289CC29D00BAF6F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3F0EF289CC2AC00BAF6F1 /* Scene+ViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A4E3F0F3289CC42700BAF6F1 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3F0F4289CC42F00BAF6F1 /* SupportingFiles */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		A4E3F0F4289CC42F00BAF6F1 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3F0F5289CC45B00BAF6F1 /* AppConfiguratorTests.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -186,6 +232,7 @@
 					};
 					A4E3F0C4289CB95A00BAF6F1 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = A4E3F0AE289CB95900BAF6F1;
 					};
 				};
@@ -314,7 +361,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E3F0E9289CBF1000BAF6F1 /* Scene.swift in Sources */,
 				A4E3F0B3289CB95900BAF6F1 /* AppDelegate.swift in Sources */,
+				A4E3F0F2289CC3D500BAF6F1 /* AppConfigurator.swift in Sources */,
+				A4E3F0F0289CC2AC00BAF6F1 /* Scene+ViewController.swift in Sources */,
+				A4E3F0EB289CBF6800BAF6F1 /* SceneCoordinatorType.swift in Sources */,
+				A4E3F0ED289CC25700BAF6F1 /* SceneTransitionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E3F0CA289CB95A00BAF6F1 /* DisneyPediaTests.swift in Sources */,
+				A4E3F0F6289CC45B00BAF6F1 /* AppConfiguratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +527,6 @@
 				INFOPLIST_FILE = DisneyPedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -506,7 +557,6 @@
 				INFOPLIST_FILE = DisneyPedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -530,15 +580,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5P4JJDT7CR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.urielh.DisneyPediaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisneyPedia.app/DisneyPedia";
@@ -551,11 +608,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5P4JJDT7CR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.urielh.DisneyPediaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
