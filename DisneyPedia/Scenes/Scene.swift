@@ -9,6 +9,6 @@ import Foundation
 
 enum Scene {
     // TODO: Remove type Anys
-    case characterList(CharacterListViewModel: Any)
+    case characterList(CharacterListViewModel)
     case character(CharacterViewModel: Any)
 }

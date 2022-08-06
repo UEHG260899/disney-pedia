@@ -13,6 +13,12 @@
 		A4A93868289F23C6004D25CF /* LobsterTwo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93864289F23C6004D25CF /* LobsterTwo-Italic.ttf */; };
 		A4A93869289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93865289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf */; };
 		A4A9386A289F23C6004D25CF /* LobsterTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93866289F23C6004D25CF /* LobsterTwo-Regular.ttf */; };
+		A4A93871289F24DC004D25CF /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A93870289F24DC004D25CF /* CharacterListViewModelTests.swift */; };
+		A4A93874289F2538004D25CF /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A93873289F2538004D25CF /* CharacterListViewModel.swift */; };
+		A4A93878289F25D0004D25CF /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A93876289F25D0004D25CF /* CharacterListViewController.swift */; };
+		A4A93879289F25D0004D25CF /* CharacterListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A93877289F25D0004D25CF /* CharacterListViewController.xib */; };
+		A4A9387D289F263B004D25CF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9387C289F263B004D25CF /* BindableType.swift */; };
+		A4A9387F289F27DB004D25CF /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9387E289F27DB004D25CF /* SceneCoordinator.swift */; };
 		A4E3F0B3289CB95900BAF6F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0B2289CB95900BAF6F1 /* AppDelegate.swift */; };
 		A4E3F0BC289CB95A00BAF6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E3F0BB289CB95A00BAF6F1 /* Assets.xcassets */; };
 		A4E3F0BF289CB95A00BAF6F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E3F0BD289CB95A00BAF6F1 /* LaunchScreen.storyboard */; };
@@ -42,6 +48,12 @@
 		A4A93864289F23C6004D25CF /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
 		A4A93865289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A4A93866289F23C6004D25CF /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
+		A4A93870289F24DC004D25CF /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
+		A4A93873289F2538004D25CF /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		A4A93876289F25D0004D25CF /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		A4A93877289F25D0004D25CF /* CharacterListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListViewController.xib; sourceTree = "<group>"; };
+		A4A9387C289F263B004D25CF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		A4A9387E289F27DB004D25CF /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		A4E3F0AF289CB95900BAF6F1 /* DisneyPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E3F0B2289CB95900BAF6F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E3F0BB289CB95A00BAF6F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +113,41 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		A4A9386F289F24BE004D25CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A4A93870289F24DC004D25CF /* CharacterListViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A4A93872289F252D004D25CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A4A93873289F2538004D25CF /* CharacterListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A4A93875289F25BF004D25CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4A93876289F25D0004D25CF /* CharacterListViewController.swift */,
+				A4A93877289F25D0004D25CF /* CharacterListViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4A9387B289F261E004D25CF /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3F0EA289CBF6800BAF6F1 /* SceneCoordinatorType.swift */,
+				A4E3F0EC289CC25700BAF6F1 /* SceneTransitionType.swift */,
+				A4A9387C289F263B004D25CF /* BindableType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		A4E3F0A6289CB95900BAF6F1 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +171,9 @@
 		A4E3F0B1289CB95900BAF6F1 /* DisneyPedia */ = {
 			isa = PBXGroup;
 			children = (
+				A4A9387B289F261E004D25CF /* Types */,
+				A4A93875289F25BF004D25CF /* Views */,
+				A4A93872289F252D004D25CF /* ViewModels */,
 				A4E3F0EE289CC29D00BAF6F1 /* Extensions */,
 				A4E3F0E7289CBF0900BAF6F1 /* Scenes */,
 				A4E3F0E2289CB9ED00BAF6F1 /* SupportingFiles */,
@@ -156,8 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E3F0E8289CBF1000BAF6F1 /* Scene.swift */,
-				A4E3F0EA289CBF6800BAF6F1 /* SceneCoordinatorType.swift */,
-				A4E3F0EC289CC25700BAF6F1 /* SceneTransitionType.swift */,
+				A4A9387E289F27DB004D25CF /* SceneCoordinator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -173,6 +222,7 @@
 		A4E3F0F3289CC42700BAF6F1 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				A4A9386F289F24BE004D25CF /* ViewModels */,
 				A4E3F0F4289CC42F00BAF6F1 /* SupportingFiles */,
 			);
 			path = Cases;
@@ -283,6 +333,7 @@
 			files = (
 				A4A9386A289F23C6004D25CF /* LobsterTwo-Regular.ttf in Resources */,
 				A4A93869289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf in Resources */,
+				A4A93879289F25D0004D25CF /* CharacterListViewController.xib in Resources */,
 				A4A93867289F23C6004D25CF /* LobsterTwo-Bold.ttf in Resources */,
 				A4A93868289F23C6004D25CF /* LobsterTwo-Italic.ttf in Resources */,
 				A4E3F0BF289CB95A00BAF6F1 /* LaunchScreen.storyboard in Resources */,
@@ -386,8 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E3F0E9289CBF1000BAF6F1 /* Scene.swift in Sources */,
+				A4A9387F289F27DB004D25CF /* SceneCoordinator.swift in Sources */,
+				A4A9387D289F263B004D25CF /* BindableType.swift in Sources */,
 				A4E3F0B3289CB95900BAF6F1 /* AppDelegate.swift in Sources */,
 				A4E3F0F2289CC3D500BAF6F1 /* AppConfigurator.swift in Sources */,
+				A4A93874289F2538004D25CF /* CharacterListViewModel.swift in Sources */,
+				A4A93878289F25D0004D25CF /* CharacterListViewController.swift in Sources */,
 				A4E3F0F0289CC2AC00BAF6F1 /* Scene+ViewController.swift in Sources */,
 				A4E3F0EB289CBF6800BAF6F1 /* SceneCoordinatorType.swift in Sources */,
 				A4E3F0ED289CC25700BAF6F1 /* SceneTransitionType.swift in Sources */,
@@ -398,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A93871289F24DC004D25CF /* CharacterListViewModelTests.swift in Sources */,
 				A4E3F0F6289CC45B00BAF6F1 /* AppConfiguratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
