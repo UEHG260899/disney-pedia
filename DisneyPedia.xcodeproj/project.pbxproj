@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		321A25C14AEE30D898FF4714 /* Pods_DisneyPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0A7BC74CB169EC7142EAEF /* Pods_DisneyPedia.framework */; };
 		A017276B464C73BC5AD91613 /* Pods_DisneyPedia_DisneyPediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF849DC0696A11FA549B9636 /* Pods_DisneyPedia_DisneyPediaTests.framework */; };
+		A4A93867289F23C6004D25CF /* LobsterTwo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93863289F23C6004D25CF /* LobsterTwo-Bold.ttf */; };
+		A4A93868289F23C6004D25CF /* LobsterTwo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93864289F23C6004D25CF /* LobsterTwo-Italic.ttf */; };
+		A4A93869289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93865289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf */; };
+		A4A9386A289F23C6004D25CF /* LobsterTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93866289F23C6004D25CF /* LobsterTwo-Regular.ttf */; };
 		A4E3F0B3289CB95900BAF6F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F0B2289CB95900BAF6F1 /* AppDelegate.swift */; };
 		A4E3F0BC289CB95A00BAF6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E3F0BB289CB95A00BAF6F1 /* Assets.xcassets */; };
 		A4E3F0BF289CB95A00BAF6F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E3F0BD289CB95A00BAF6F1 /* LaunchScreen.storyboard */; };
@@ -34,6 +38,10 @@
 		5C4B9E2510BCB1385730FB73 /* Pods-DisneyPedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisneyPedia.release.xcconfig"; path = "Target Support Files/Pods-DisneyPedia/Pods-DisneyPedia.release.xcconfig"; sourceTree = "<group>"; };
 		6BF07B7A3E801E5BEC9D996E /* Pods-DisneyPedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisneyPedia.debug.xcconfig"; path = "Target Support Files/Pods-DisneyPedia/Pods-DisneyPedia.debug.xcconfig"; sourceTree = "<group>"; };
 		9E0A7BC74CB169EC7142EAEF /* Pods_DisneyPedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DisneyPedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A93863289F23C6004D25CF /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
+		A4A93864289F23C6004D25CF /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
+		A4A93865289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A4A93866289F23C6004D25CF /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
 		A4E3F0AF289CB95900BAF6F1 /* DisneyPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E3F0B2289CB95900BAF6F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E3F0BB289CB95A00BAF6F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +90,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A4A93862289F22F7004D25CF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A4A93863289F23C6004D25CF /* LobsterTwo-Bold.ttf */,
+				A4A93865289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf */,
+				A4A93864289F23C6004D25CF /* LobsterTwo-Italic.ttf */,
+				A4A93866289F23C6004D25CF /* LobsterTwo-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A4E3F0A6289CB95900BAF6F1 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +143,7 @@
 		A4E3F0E2289CB9ED00BAF6F1 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A4A93862289F22F7004D25CF /* Fonts */,
 				A4E3F0B2289CB95900BAF6F1 /* AppDelegate.swift */,
 				A4E3F0BB289CB95A00BAF6F1 /* Assets.xcassets */,
 				A4E3F0BD289CB95A00BAF6F1 /* LaunchScreen.storyboard */,
@@ -261,6 +281,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A9386A289F23C6004D25CF /* LobsterTwo-Regular.ttf in Resources */,
+				A4A93869289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf in Resources */,
+				A4A93867289F23C6004D25CF /* LobsterTwo-Bold.ttf in Resources */,
+				A4A93868289F23C6004D25CF /* LobsterTwo-Italic.ttf in Resources */,
 				A4E3F0BF289CB95A00BAF6F1 /* LaunchScreen.storyboard in Resources */,
 				A4E3F0BC289CB95A00BAF6F1 /* Assets.xcassets in Resources */,
 			);
