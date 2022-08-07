@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		321A25C14AEE30D898FF4714 /* Pods_DisneyPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0A7BC74CB169EC7142EAEF /* Pods_DisneyPedia.framework */; };
 		A017276B464C73BC5AD91613 /* Pods_DisneyPedia_DisneyPediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF849DC0696A11FA549B9636 /* Pods_DisneyPedia_DisneyPediaTests.framework */; };
+		A4770F5628A03D610025AC6D /* NetworkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F5528A03D610025AC6D /* NetworkerTests.swift */; };
+		A4770F5828A03D9E0025AC6D /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F5728A03D9E0025AC6D /* Networker.swift */; };
+		A4770F5B28A04F960025AC6D /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F5A28A04F960025AC6D /* CharacterList.swift */; };
+		A4770F5D28A050E70025AC6D /* DisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F5C28A050E70025AC6D /* DisneyCharacter.swift */; };
+		A4770F6028A056590025AC6D /* CorrectCharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F5F28A056590025AC6D /* CorrectCharacterList.swift */; };
+		A4770F6228A056730025AC6D /* CorrectDisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F6128A056730025AC6D /* CorrectDisneyCharacter.swift */; };
+		A4770F6428A056BE0025AC6D /* IncorrectCharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F6328A056BE0025AC6D /* IncorrectCharacterList.swift */; };
+		A4770F6628A056CD0025AC6D /* IncorrectDisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770F6528A056CD0025AC6D /* IncorrectDisneyCharacter.swift */; };
 		A4A93867289F23C6004D25CF /* LobsterTwo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93863289F23C6004D25CF /* LobsterTwo-Bold.ttf */; };
 		A4A93868289F23C6004D25CF /* LobsterTwo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93864289F23C6004D25CF /* LobsterTwo-Italic.ttf */; };
 		A4A93869289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4A93865289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf */; };
@@ -47,6 +55,14 @@
 		5C4B9E2510BCB1385730FB73 /* Pods-DisneyPedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisneyPedia.release.xcconfig"; path = "Target Support Files/Pods-DisneyPedia/Pods-DisneyPedia.release.xcconfig"; sourceTree = "<group>"; };
 		6BF07B7A3E801E5BEC9D996E /* Pods-DisneyPedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisneyPedia.debug.xcconfig"; path = "Target Support Files/Pods-DisneyPedia/Pods-DisneyPedia.debug.xcconfig"; sourceTree = "<group>"; };
 		9E0A7BC74CB169EC7142EAEF /* Pods_DisneyPedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DisneyPedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4770F5528A03D610025AC6D /* NetworkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkerTests.swift; sourceTree = "<group>"; };
+		A4770F5728A03D9E0025AC6D /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		A4770F5A28A04F960025AC6D /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
+		A4770F5C28A050E70025AC6D /* DisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacter.swift; sourceTree = "<group>"; };
+		A4770F5F28A056590025AC6D /* CorrectCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectCharacterList.swift; sourceTree = "<group>"; };
+		A4770F6128A056730025AC6D /* CorrectDisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectDisneyCharacter.swift; sourceTree = "<group>"; };
+		A4770F6328A056BE0025AC6D /* IncorrectCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectCharacterList.swift; sourceTree = "<group>"; };
+		A4770F6528A056CD0025AC6D /* IncorrectDisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectDisneyCharacter.swift; sourceTree = "<group>"; };
 		A4A93863289F23C6004D25CF /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
 		A4A93864289F23C6004D25CF /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
 		A4A93865289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -106,6 +122,42 @@
 				AE681D83B303DD801EB7ED76 /* Pods-DisneyPedia-DisneyPediaTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A4770F5328A03D460025AC6D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A4770F5728A03D9E0025AC6D /* Networker.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A4770F5428A03D500025AC6D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A4770F5528A03D610025AC6D /* NetworkerTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A4770F5928A04F680025AC6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4770F5A28A04F960025AC6D /* CharacterList.swift */,
+				A4770F5C28A050E70025AC6D /* DisneyCharacter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4770F5E28A0563A0025AC6D /* TestModels */ = {
+			isa = PBXGroup;
+			children = (
+				A4770F5F28A056590025AC6D /* CorrectCharacterList.swift */,
+				A4770F6128A056730025AC6D /* CorrectDisneyCharacter.swift */,
+				A4770F6328A056BE0025AC6D /* IncorrectCharacterList.swift */,
+				A4770F6528A056CD0025AC6D /* IncorrectDisneyCharacter.swift */,
+			);
+			path = TestModels;
 			sourceTree = "<group>";
 		};
 		A4A93862289F22F7004D25CF /* Fonts */ = {
@@ -188,6 +240,8 @@
 		A4E3F0B1289CB95900BAF6F1 /* DisneyPedia */ = {
 			isa = PBXGroup;
 			children = (
+				A4770F5928A04F680025AC6D /* Models */,
+				A4770F5328A03D460025AC6D /* Network */,
 				A4E3F0E2289CB9ED00BAF6F1 /* SupportingFiles */,
 				A4E3F0EE289CC29D00BAF6F1 /* Extensions */,
 				A4E3F0E7289CBF0900BAF6F1 /* Scenes */,
@@ -203,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E3F0F3289CC42700BAF6F1 /* Cases */,
+				A4770F5E28A0563A0025AC6D /* TestModels */,
 			);
 			path = DisneyPediaTests;
 			sourceTree = "<group>";
@@ -239,6 +294,7 @@
 		A4E3F0F3289CC42700BAF6F1 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				A4770F5428A03D500025AC6D /* Network */,
 				A4A9386F289F24BE004D25CF /* ViewModels */,
 				A4E3F0F4289CC42F00BAF6F1 /* SupportingFiles */,
 			);
@@ -455,7 +511,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D4CEF128A01FD100F865BE /* CharacterCollectionViewCell.swift in Sources */,
+				A4770F5B28A04F960025AC6D /* CharacterList.swift in Sources */,
 				A4E3F0E9289CBF1000BAF6F1 /* Scene.swift in Sources */,
+				A4770F5D28A050E70025AC6D /* DisneyCharacter.swift in Sources */,
 				A4A9387F289F27DB004D25CF /* SceneCoordinator.swift in Sources */,
 				A4A9387D289F263B004D25CF /* BindableType.swift in Sources */,
 				A4D4CEED28A01F2200F865BE /* ReuableCellType.swift in Sources */,
@@ -466,6 +524,7 @@
 				A4E3F0F0289CC2AC00BAF6F1 /* Scene+ViewController.swift in Sources */,
 				A4E3F0EB289CBF6800BAF6F1 /* SceneCoordinatorType.swift in Sources */,
 				A4E3F0ED289CC25700BAF6F1 /* SceneTransitionType.swift in Sources */,
+				A4770F5828A03D9E0025AC6D /* Networker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,8 +532,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4770F6028A056590025AC6D /* CorrectCharacterList.swift in Sources */,
 				A4A93871289F24DC004D25CF /* CharacterListViewModelTests.swift in Sources */,
 				A4E3F0F6289CC45B00BAF6F1 /* AppConfiguratorTests.swift in Sources */,
+				A4770F5628A03D610025AC6D /* NetworkerTests.swift in Sources */,
+				A4770F6228A056730025AC6D /* CorrectDisneyCharacter.swift in Sources */,
+				A4770F6628A056CD0025AC6D /* IncorrectDisneyCharacter.swift in Sources */,
+				A4770F6428A056BE0025AC6D /* IncorrectCharacterList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
