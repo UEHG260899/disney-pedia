@@ -23,6 +23,9 @@ struct CharacterListViewModel {
     /// A greeting with an initial value (firstGreeting) and a continous one calculated (continousGreeting)
     let greeting: Driver<String>
     /// List of characters
+    let initialCharacterList: Observable<[DisneyCharacter]>
+    /// Continously update charanter list
+    let characterListRelay = PublishRelay<[DisneyCharacter]>()
     let characterList: Observable<[DisneyCharacter]>
     /// Observable that tells if the app is making a network request
     let taskIsRunning: Driver<Bool>
@@ -67,11 +70,14 @@ struct CharacterListViewModel {
             .concat(continousGreeting)
             .asDriver(onErrorJustReturn: "")
         
-        self.characterList = characterListService.characters(page: Int.random(in: 1...149))
+        self.initialCharacterList = characterListService.characters(page: Int.random(in: 1...149))
             .flatMap({ list in
                 return Observable.from(optional: list.data)
             })
             .share()
+        
+        self.characterList = Observable.concat(initialCharacterList,
+                                              characterListRelay.asObservable())
         
         self.taskIsRunning = Observable.merge(characterList.map{ _ in false },
                                               searchText.map{ _ in true }.asObservable())

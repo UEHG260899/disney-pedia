@@ -62,6 +62,21 @@ class CharacterListViewController: UIViewController, BindableType {
             .filter { !$0.isEmpty }
             .bind(to: viewModel.searchText)
             .disposed(by: disposeBag)
+        
+        _ = viewModel
+            .searchText
+            .flatMap { [weak self] _ -> Observable<[DisneyCharacter]> in
+                
+                guard let self = self else {
+                    return Observable.of([])
+                }
+                
+                return self.viewModel.characterListService.characters(page: Int.random(in: 1...149))
+                    .flatMap { Observable.from(optional: $0.data) }
+            }
+            .subscribe(onNext: { [weak self] value in
+                self?.viewModel.characterListRelay.accept(value)
+            })
 
     }
     
