@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RxRelay
 
 struct CharacterListViewModel {
     
@@ -21,6 +22,12 @@ struct CharacterListViewModel {
     let continousGreeting: Observable<String>
     /// A greeting with an initial value (firstGreeting) and a continous one calculated (continousGreeting)
     let greeting: Driver<String>
+    /// List of characters
+    let characterList: Observable<[DisneyCharacter]>
+    /// Observable that tells if the app is making a network request
+    let taskIsRunning: Driver<Bool>
+    /// Relay to bind the searching action to the taskIsRunning Driver
+    let searchText = PublishRelay<String>()
     
     init(characterListService: CharacterListServiceType, sceneCoordinator: SceneCoordinatorType) {
         self.characterListService = characterListService
@@ -60,7 +67,18 @@ struct CharacterListViewModel {
             .concat(continousGreeting)
             .asDriver(onErrorJustReturn: "")
         
-    }
+        self.characterList = characterListService.characters(page: Int.random(in: 1...149))
+            .flatMap({ list in
+                return Observable.from(optional: list.data)
+            })
+            .share()
+        
+        self.taskIsRunning = Observable.merge(characterList.map{ _ in false },
+                                              searchText.map{ _ in true }.asObservable())
+        .startWith(true)
+        .asDriver(onErrorJustReturn: false)
 
+    }
+    
     
 }

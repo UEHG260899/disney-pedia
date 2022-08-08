@@ -79,5 +79,13 @@ class CharacterListViewModelTests: XCTestCase {
         }
 
     }
+    
+    func testIfCharacterListReturnsAnObservable() {
+        XCTAssertNotNil(try sut.characterList.toBlocking().first())
+    }
+    
+    func testIfTaskRunningReturnsObservableWhenNetworkIsFetching() {
+        XCTAssertNotNil(try sut.taskRunning.toBlocking().first())
+    }
 
 }

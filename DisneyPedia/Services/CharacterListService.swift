@@ -20,13 +20,13 @@ struct CharacterListService: NetworkServiceType, CharacterListServiceType {
         return request
     }
     
-    func characters(page: Int) -> Observable<[CharacterList]> {
+    func characters(page: Int) -> Observable<CharacterList> {
         let params = [
             "page": String(page)
         ]
         
-        let request = buildRequest(method: .get, path: "characters", parameters: params)
+        let request = buildRequest(method: .get, path: "/characters", parameters: params)
         
-        return Networker.decodable(request: request, type: [CharacterList].self)
+        return Networker.decodable(request: request, type: CharacterList.self)
     }
 }

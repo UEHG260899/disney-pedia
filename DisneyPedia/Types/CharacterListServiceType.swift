@@ -10,6 +10,6 @@ import RxSwift
 
 protocol CharacterListServiceType {
     
-    func characters(page: Int) -> Observable<[CharacterList]>
+    func characters(page: Int) -> Observable<CharacterList>
     
 }

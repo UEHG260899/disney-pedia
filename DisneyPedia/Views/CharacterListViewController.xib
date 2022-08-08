@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterListViewController" customModule="DisneyPedia" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="u3x-vF-UEX" id="bS8-lb-tLq"/>
                 <outlet property="characterListCollectionView" destination="YIa-tS-eLw" id="krd-Lk-7cZ"/>
                 <outlet property="greetingLbl" destination="29l-wF-elp" id="BOi-TH-INL"/>
                 <outlet property="searchTextField" destination="7KE-1N-emt" id="d1E-Jr-L4v"/>
@@ -51,17 +52,22 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-vF-UEX">
+                    <rect key="frame" x="188.5" y="487.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YIa-tS-eLw" secondAttribute="trailing" constant="16" id="9nd-Zv-9Ld"/>
+                <constraint firstItem="u3x-vF-UEX" firstAttribute="centerX" secondItem="YIa-tS-eLw" secondAttribute="centerX" id="Eb9-vp-f0S"/>
                 <constraint firstItem="7KE-1N-emt" firstAttribute="top" secondItem="29l-wF-elp" secondAttribute="bottom" constant="20" id="Es9-u8-EpF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7KE-1N-emt" secondAttribute="trailing" constant="16" id="IA5-dv-iij"/>
                 <constraint firstItem="29l-wF-elp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KKI-Lk-Gb6"/>
                 <constraint firstItem="7KE-1N-emt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KiS-hI-eaU"/>
                 <constraint firstItem="YIa-tS-eLw" firstAttribute="top" secondItem="7KE-1N-emt" secondAttribute="bottom" constant="20" id="LtL-D9-CsI"/>
                 <constraint firstItem="YIa-tS-eLw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="YTe-xB-YKO"/>
+                <constraint firstItem="u3x-vF-UEX" firstAttribute="centerY" secondItem="YIa-tS-eLw" secondAttribute="centerY" id="due-48-HlK"/>
                 <constraint firstItem="29l-wF-elp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="kRq-Z8-4DZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YIa-tS-eLw" secondAttribute="bottom" constant="10" id="zgW-ps-rbq"/>
             </constraints>

@@ -33,5 +33,9 @@ class CharacterCollectionViewCell: UICollectionViewCell, ReusableCellType {
         cardView.layer.shadowOffset = CGSize(width: 0, height: 2)
         cardView.layer.shadowRadius = 5
     }
+    
+    func update(with data: DisneyCharacter) {
+        characterNameLabel.text = data.name
+    }
 
 }

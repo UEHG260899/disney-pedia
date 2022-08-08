@@ -9,7 +9,7 @@ import Foundation
 
 struct DisneyCharacter: Decodable {
     let id: Int64
-    let imageUrl: String
+    let imageUrl: String?
     let name: String
     let url: String
     let enemies: [String]
