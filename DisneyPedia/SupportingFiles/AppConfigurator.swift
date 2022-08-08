@@ -22,7 +22,7 @@ struct AppConfigurator {
         navController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navController.navigationBar.isTranslucent = true
         navController.navigationBar.prefersLargeTitles = false
-        navController.navigationBar.barStyle = .black
+        navController.navigationBar.barStyle = .default
         navController.navigationBar.shadowImage = UIImage()
         navController.navigationBar.titleTextAttributes = TextStyles.titleTextStyles
         return navController

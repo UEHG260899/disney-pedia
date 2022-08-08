@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CharacterListViewController: UIViewController, BindableType {
 
@@ -17,6 +19,7 @@ class CharacterListViewController: UIViewController, BindableType {
     private let collectionInsets = CGFloat(10)
     private let collectionSideConstraints = CGFloat(32)
     private let screenWidth = UIScreen.main.bounds.width
+    private var disposeBag = DisposeBag()
     
     var viewModel: CharacterListViewModel!
 
@@ -34,6 +37,10 @@ class CharacterListViewController: UIViewController, BindableType {
     }
 
     func bindViewModel() {
+        
+        viewModel.greeting
+            .drive(greetingLbl.rx.text)
+            .disposed(by: disposeBag)
         
     }
 
@@ -54,8 +61,7 @@ extension CharacterListViewController: UICollectionViewDelegate, UICollectionVie
         characterCell.layoutIfNeeded()
         return characterCell
     }
-    
-    
+
 }
 
 extension CharacterListViewController: UICollectionViewDelegateFlowLayout {

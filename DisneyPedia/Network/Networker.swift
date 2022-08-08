@@ -11,6 +11,11 @@ import RxSwift
 
 struct Networker {
     
+    enum HTTPMethods: String {
+        case get = "GET"
+        case post = "POST"
+    }
+    
     enum NetworkerErrors: Error {
         case unknown
         case invalidResponse(response: URLResponse)

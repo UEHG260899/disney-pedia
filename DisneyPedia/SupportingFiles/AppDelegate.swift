@@ -15,9 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        let service = CharacterListService()
         let sceneCoordinator = SceneCoordinator(window: window!)
         
-        let characterListViewModel = CharacterListViewModel()
+        let characterListViewModel = CharacterListViewModel(characterListService: service, sceneCoordinator: sceneCoordinator)
         let firstScene = Scene.characterList(characterListViewModel)
         
         sceneCoordinator.transition(to: firstScene, type: .root, withNavController: true)
