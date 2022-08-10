@@ -40,4 +40,5 @@ struct CharacterListService: NetworkServiceType, CharacterListServiceType {
         
         return Networker.data(request: request)
     }
+ 
 }

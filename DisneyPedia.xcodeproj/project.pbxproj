@@ -545,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A784B028A08ED0005C9734 /* NetworkServiceType.swift in Sources */,
+
 				A4CE50E928A3320600FAF2E0 /* CharacterCellViewModel.swift in Sources */,
 				A4D4CEF128A01FD100F865BE /* CharacterCollectionViewCell.swift in Sources */,
 				A4770F5B28A04F960025AC6D /* CharacterList.swift in Sources */,
