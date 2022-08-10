@@ -12,4 +12,6 @@ protocol CharacterListServiceType {
     
     func characters(page: Int) -> Observable<CharacterList>
     
+    func image(url: String) -> Observable<Data>
+
 }

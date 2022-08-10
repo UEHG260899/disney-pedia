@@ -31,6 +31,8 @@
 		A4A93879289F25D0004D25CF /* CharacterListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A93877289F25D0004D25CF /* CharacterListViewController.xib */; };
 		A4A9387D289F263B004D25CF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9387C289F263B004D25CF /* BindableType.swift */; };
 		A4A9387F289F27DB004D25CF /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9387E289F27DB004D25CF /* SceneCoordinator.swift */; };
+		A4CE50E928A3320600FAF2E0 /* CharacterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE50E828A3320600FAF2E0 /* CharacterCellViewModel.swift */; };
+		A4CE50EB28A3344600FAF2E0 /* CharacterCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE50EA28A3344600FAF2E0 /* CharacterCellViewModelTests.swift */; };
 		A4D4CEED28A01F2200F865BE /* ReuableCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D4CEEC28A01F2200F865BE /* ReuableCellType.swift */; };
 		A4D4CEF128A01FD100F865BE /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D4CEEF28A01FD100F865BE /* CharacterCollectionViewCell.swift */; };
 		A4D4CEF228A01FD100F865BE /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4D4CEF028A01FD100F865BE /* CharacterCollectionViewCell.xib */; };
@@ -81,6 +83,8 @@
 		A4A93877289F25D0004D25CF /* CharacterListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListViewController.xib; sourceTree = "<group>"; };
 		A4A9387C289F263B004D25CF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		A4A9387E289F27DB004D25CF /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		A4CE50E828A3320600FAF2E0 /* CharacterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModel.swift; sourceTree = "<group>"; };
+		A4CE50EA28A3344600FAF2E0 /* CharacterCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModelTests.swift; sourceTree = "<group>"; };
 		A4D4CEEC28A01F2200F865BE /* ReuableCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuableCellType.swift; sourceTree = "<group>"; };
 		A4D4CEEF28A01FD100F865BE /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4D4CEF028A01FD100F865BE /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				A4A93870289F24DC004D25CF /* CharacterListViewModelTests.swift */,
+				A4CE50EA28A3344600FAF2E0 /* CharacterCellViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				A4A93873289F2538004D25CF /* CharacterListViewModel.swift */,
+				A4CE50E828A3320600FAF2E0 /* CharacterCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -539,6 +545,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A784B028A08ED0005C9734 /* NetworkServiceType.swift in Sources */,
+
+				A4CE50E928A3320600FAF2E0 /* CharacterCellViewModel.swift in Sources */,
 				A4D4CEF128A01FD100F865BE /* CharacterCollectionViewCell.swift in Sources */,
 				A4770F5B28A04F960025AC6D /* CharacterList.swift in Sources */,
 				A4E3F0E9289CBF1000BAF6F1 /* Scene.swift in Sources */,
@@ -570,6 +578,7 @@
 				A4770F5628A03D610025AC6D /* NetworkerTests.swift in Sources */,
 				A4770F6228A056730025AC6D /* CorrectDisneyCharacter.swift in Sources */,
 				A4770F6628A056CD0025AC6D /* IncorrectDisneyCharacter.swift in Sources */,
+				A4CE50EB28A3344600FAF2E0 /* CharacterCellViewModelTests.swift in Sources */,
 				A4770F6428A056BE0025AC6D /* IncorrectCharacterList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
