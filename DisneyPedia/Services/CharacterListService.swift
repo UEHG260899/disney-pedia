@@ -29,4 +29,15 @@ struct CharacterListService: NetworkServiceType, CharacterListServiceType {
         
         return Networker.decodable(request: request, type: CharacterList.self)
     }
+    
+    func image(url: String) -> Observable<Data> {
+        
+        guard let url = URL(string: url) else {
+            return Observable.of(Data())
+        }
+        
+        let request = URLRequest(url: url)
+        
+        return Networker.data(request: request)
+    }
 }

@@ -24,3 +24,10 @@ extension BindableType where Self: UIViewController {
         bindViewModel()
     }
 }
+
+extension BindableType where Self: UICollectionViewCell {
+    func bindViewModel(to model: Self.ViewModelType) {
+        viewModel = model
+        bindViewModel()
+    }
+}

@@ -49,9 +49,13 @@
                                     <constraint firstAttribute="width" secondItem="JZr-mu-Z2W" secondAttribute="height" multiplier="1:1" id="yDw-Is-rTv"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="C14-oW-XNB">
+                                <rect key="frame" x="129" y="117" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="C14-oW-XNB" firstAttribute="centerY" secondItem="JZr-mu-Z2W" secondAttribute="centerY" id="4tZ-Eh-QMD"/>
                             <constraint firstItem="EIg-1H-LgG" firstAttribute="top" secondItem="JZr-mu-Z2W" secondAttribute="bottom" constant="30" id="Bof-fy-4SY"/>
                             <constraint firstItem="gZ1-Gr-c5R" firstAttribute="height" secondItem="A73-7l-Txe" secondAttribute="height" multiplier="0.5" id="E52-fh-oaI"/>
                             <constraint firstAttribute="bottom" secondItem="gZ1-Gr-c5R" secondAttribute="bottom" id="Fwz-g4-BWo"/>
@@ -59,6 +63,7 @@
                             <constraint firstItem="JZr-mu-Z2W" firstAttribute="centerX" secondItem="gZ1-Gr-c5R" secondAttribute="centerX" id="ITD-38-HUq"/>
                             <constraint firstItem="JZr-mu-Z2W" firstAttribute="centerY" secondItem="A73-7l-Txe" secondAttribute="centerY" id="TId-tl-XMH"/>
                             <constraint firstItem="gZ1-Gr-c5R" firstAttribute="leading" secondItem="A73-7l-Txe" secondAttribute="leading" id="VPO-uf-bhQ"/>
+                            <constraint firstItem="C14-oW-XNB" firstAttribute="centerX" secondItem="JZr-mu-Z2W" secondAttribute="centerX" id="gsh-Tu-dsU"/>
                             <constraint firstAttribute="trailing" secondItem="gZ1-Gr-c5R" secondAttribute="trailing" id="qJX-K4-ESZ"/>
                         </constraints>
                     </view>
@@ -73,6 +78,7 @@
             </constraints>
             <size key="customSize" width="315" height="291"/>
             <connections>
+                <outlet property="activityIndicator" destination="C14-oW-XNB" id="nag-5H-TXa"/>
                 <outlet property="bottomView" destination="gZ1-Gr-c5R" id="vj8-EL-VhT"/>
                 <outlet property="cardView" destination="A73-7l-Txe" id="ztl-Fs-Lhn"/>
                 <outlet property="characterImageView" destination="JZr-mu-Z2W" id="xbT-pk-iGu"/>

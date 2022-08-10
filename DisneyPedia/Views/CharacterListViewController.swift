@@ -45,7 +45,9 @@ class CharacterListViewController: UIViewController, BindableType {
         viewModel.characterList
             .observe(on: MainScheduler.instance)
             .bind(to: characterListCollectionView.rx.items(cellIdentifier: CharacterCollectionViewCell.identifier, cellType: CharacterCollectionViewCell.self)) { row, model, cell in
-                cell.update(with: model)
+                let cellViewModel = CharacterCellViewModel(characterListService: self.viewModel.characterListService, name: model.name, imageUrl: model.imageUrl ?? "")
+                cell.bindViewModel(to: cellViewModel)
+                cell.layoutIfNeeded()
             }.disposed(by: disposeBag)
         
         viewModel.taskIsRunning
