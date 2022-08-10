@@ -85,7 +85,7 @@ class CharacterListViewModelTests: XCTestCase {
     }
     
     func testIfTaskRunningReturnsObservableWhenNetworkIsFetching() {
-        XCTAssertNotNil(try sut.taskRunning.toBlocking().first())
+        XCTAssertNotNil(try sut.taskIsRunning.toBlocking().first())
     }
 
 }

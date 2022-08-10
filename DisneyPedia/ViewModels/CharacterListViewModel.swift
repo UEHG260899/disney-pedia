@@ -31,7 +31,7 @@ struct CharacterListViewModel {
     let taskIsRunning: Driver<Bool>
     /// Relay to bind the searching action to the taskIsRunning Driver
     let searchText = PublishRelay<String>()
-    
+        
     init(characterListService: CharacterListServiceType, sceneCoordinator: SceneCoordinatorType) {
         self.characterListService = characterListService
         self.sceneCoordinator = sceneCoordinator
