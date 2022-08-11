@@ -20,6 +20,20 @@ struct DisneyCharacter: Decodable {
     let shortFilms: [String]
     let films: [String]
     
+    static var mock: DisneyCharacter {
+        DisneyCharacter(id: 0,
+                        imageUrl: "",
+                        name: "",
+                        url: "",
+                        enemies: [],
+                        allies: [],
+                        parkAttractions: [],
+                        videoGames: [],
+                        tvShows: [],
+                        shortFilms: [],
+                        films: [])
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case name
