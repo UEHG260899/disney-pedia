@@ -72,5 +72,27 @@ class CharacterViewModelTests: XCTestCase {
         // then
         XCTAssertEqual(character?.name, "")
     }
+        
+    func testIfShouldHideFilmsEmmitsFalseWhenCharacterHasFilms() {
+        // given
+        let sutWithFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 938)
+        
+        // when
+        let value = try! sutWithFilms.shouldHideFilms.toBlocking().first()
+        
+        // then
+        XCTAssertFalse(value!)
+    }
+    
+    func testIfShouldShowFilmsDoesntEmmitseWhenCharacterDoesntHaveFilms() {
+        // given
+        let sutWithFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 542)
+        
+        // when
+        let value = try! sutWithFilms.shouldHideFilms.toBlocking().first()
+        
+        // then
+        XCTAssertNil(value)
+    }
 
 }

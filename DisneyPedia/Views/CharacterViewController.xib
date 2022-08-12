@@ -8,10 +8,24 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="LobsterTwo-Bold.ttf">
+            <string>LobsterTwo-Bold</string>
+        </array>
+        <array key="LobsterTwo-Regular.ttf">
+            <string>LobsterTwo</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterViewController" customModule="DisneyPedia" customModuleProvider="target">
             <connections>
-                <outlet property="testLabel" destination="Kpu-fu-0Ws" id="hNP-0d-mkT"/>
+                <outlet property="activityIndicator" destination="8cD-JR-xHS" id="mWg-48-4FV"/>
+                <outlet property="cardView" destination="7cN-Jb-FGI" id="54q-RL-AWz"/>
+                <outlet property="characterImageView" destination="Nrm-wu-yWb" id="68R-RE-F3C"/>
+                <outlet property="characterNameLabel" destination="E0h-zd-xTw" id="eSN-P5-kvC"/>
+                <outlet property="characterNameTileLabel" destination="WQ1-TO-bMm" id="ENl-fQ-zbC"/>
+                <outlet property="filmsStackView" destination="Pzz-bB-FJp" id="cSu-Eq-zsS"/>
+                <outlet property="filmsTitleLabel" destination="dVv-ow-q2H" id="tX4-DU-isN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,22 +34,161 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-fu-0Ws">
-                    <rect key="frame" x="186" y="463" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2Q-gs-wwk">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asq-w8-MgT">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-qb-opF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-oq-OKN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDu-dV-blO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-wu-yWb">
+                                                            <rect key="frame" x="134.5" y="16" width="145" height="145"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Nrm-wu-yWb" secondAttribute="height" multiplier="1:1" id="10D-Cf-Gea"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Nrm-wu-yWb" firstAttribute="top" secondItem="EDu-dV-blO" secondAttribute="top" constant="16" id="0mR-yM-yol"/>
+                                                        <constraint firstItem="Nrm-wu-yWb" firstAttribute="centerX" secondItem="EDu-dV-blO" secondAttribute="centerX" id="E8k-Zc-xxg"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-Jb-FGI">
+                                                    <rect key="frame" x="0.0" y="200" width="414" height="618"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9DI-3C-4eR">
+                                                            <rect key="frame" x="8" y="8" width="398" height="53"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información del Personaje" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjF-hN-8dr">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo-Bold" family="Lobster Two" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Po2-EU-q3d">
+                                                                    <rect key="frame" x="0.0" y="31.5" width="398" height="21.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Nombre:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ1-TO-bMm">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="58" height="21.5"/>
+                                                                            <fontDescription key="fontDescription" name="LobsterTwo-Bold" family="Lobster Two" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0h-zd-xTw">
+                                                                            <rect key="frame" x="63" y="0.0" width="335" height="21.5"/>
+                                                                            <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peliculas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVv-ow-q2H">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo-Bold" family="Lobster Two" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pzz-bB-FJp">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubk-9U-O1F">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-gW-vck">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-JR-xHS">
+                                                            <rect key="frame" x="188.5" y="190.5" width="37" height="37"/>
+                                                        </activityIndicatorView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="9DI-3C-4eR" firstAttribute="leading" secondItem="7cN-Jb-FGI" secondAttribute="leading" constant="8" id="IPd-rT-9mc"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9DI-3C-4eR" secondAttribute="bottom" constant="8" id="SCR-yD-GX0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9DI-3C-4eR" secondAttribute="trailing" constant="8" id="fEK-KM-FAO"/>
+                                                        <constraint firstItem="9DI-3C-4eR" firstAttribute="top" secondItem="7cN-Jb-FGI" secondAttribute="top" constant="8" id="miX-ou-2FW"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="EDu-dV-blO" firstAttribute="top" secondItem="Jwg-oq-OKN" secondAttribute="top" id="1Lx-p6-cAQ"/>
+                                                <constraint firstItem="7cN-Jb-FGI" firstAttribute="leading" secondItem="Jwg-oq-OKN" secondAttribute="leading" id="1e2-FE-jVs"/>
+                                                <constraint firstAttribute="trailing" secondItem="EDu-dV-blO" secondAttribute="trailing" id="BEq-En-Pq0"/>
+                                                <constraint firstItem="EDu-dV-blO" firstAttribute="leading" secondItem="Jwg-oq-OKN" secondAttribute="leading" id="L8T-Le-kNl"/>
+                                                <constraint firstItem="7cN-Jb-FGI" firstAttribute="top" secondItem="EDu-dV-blO" secondAttribute="bottom" constant="-24" id="YqJ-47-AFY"/>
+                                                <constraint firstAttribute="bottom" secondItem="7cN-Jb-FGI" secondAttribute="bottom" id="b4i-SE-PvI"/>
+                                                <constraint firstAttribute="trailing" secondItem="7cN-Jb-FGI" secondAttribute="trailing" id="oMZ-aH-Dlh"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Jwg-oq-OKN" secondAttribute="bottom" id="GKv-Bk-NYI"/>
+                                        <constraint firstItem="Jwg-oq-OKN" firstAttribute="top" secondItem="uyt-qb-opF" secondAttribute="top" id="JFe-SM-MrM"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jwg-oq-OKN" secondAttribute="trailing" id="sgL-me-pDt"/>
+                                        <constraint firstItem="Jwg-oq-OKN" firstAttribute="leading" secondItem="uyt-qb-opF" secondAttribute="leading" id="toy-xa-Rxm"/>
+                                    </constraints>
+                                </scrollView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="uyt-qb-opF" secondAttribute="bottom" id="EPv-vC-lq7"/>
+                                <constraint firstItem="uyt-qb-opF" firstAttribute="top" secondItem="asq-w8-MgT" secondAttribute="top" id="NnY-aQ-91H"/>
+                                <constraint firstAttribute="trailing" secondItem="uyt-qb-opF" secondAttribute="trailing" id="U8d-nf-amb"/>
+                                <constraint firstItem="Jwg-oq-OKN" firstAttribute="width" secondItem="asq-w8-MgT" secondAttribute="width" id="UCK-oB-XBn"/>
+                                <constraint firstItem="Jwg-oq-OKN" firstAttribute="height" secondItem="asq-w8-MgT" secondAttribute="height" priority="250" id="Ucp-2V-7AM"/>
+                                <constraint firstItem="uyt-qb-opF" firstAttribute="leading" secondItem="asq-w8-MgT" secondAttribute="leading" id="cQW-hf-8Xl"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="asq-w8-MgT" firstAttribute="top" secondItem="d2Q-gs-wwk" secondAttribute="top" id="Xno-zj-qXn"/>
+                        <constraint firstItem="asq-w8-MgT" firstAttribute="leading" secondItem="d2Q-gs-wwk" secondAttribute="leading" id="Z5v-e6-QLT"/>
+                        <constraint firstAttribute="trailing" secondItem="asq-w8-MgT" secondAttribute="trailing" id="h8s-iQ-9qR"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <constraints>
+                <constraint firstItem="d2Q-gs-wwk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0th-Ch-K89"/>
+                <constraint firstItem="Nrm-wu-yWb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.35" id="H9D-kU-e0n"/>
+                <constraint firstItem="EDu-dV-blO" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.25" id="VU0-B7-FbV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="asq-w8-MgT" secondAttribute="bottom" id="bTN-Ys-a7s"/>
+                <constraint firstItem="d2Q-gs-wwk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cD6-aC-D8x"/>
+                <constraint firstAttribute="bottom" secondItem="d2Q-gs-wwk" secondAttribute="bottom" id="eDh-Wj-BjM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d2Q-gs-wwk" secondAttribute="trailing" id="eIq-H4-5lS"/>
+                <constraint firstItem="8cD-JR-xHS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="nVR-Da-Xdl"/>
+                <constraint firstItem="8cD-JR-xHS" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="raq-jN-yzc"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="98"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
