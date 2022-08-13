@@ -12,6 +12,7 @@ import RxCocoa
 class CharacterViewController: UIViewController, BindableType {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameTileLabel: UILabel!
@@ -37,6 +38,11 @@ class CharacterViewController: UIViewController, BindableType {
         configureNavBar()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupImage()
+    }
+    
     private func setupUI() {
         cardView.layer.cornerRadius = 16
         cardView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -50,6 +56,10 @@ class CharacterViewController: UIViewController, BindableType {
     @objc
     private func onClickedBack() {
         viewModel.coordinator.pop()
+    }
+    
+    private func setupImage() {
+        characterImageView.layer.cornerRadius = characterImageView.frame.height / 2
     }
 
     func bindViewModel() {
@@ -156,6 +166,16 @@ class CharacterViewController: UIViewController, BindableType {
                 
                 self.display(attractions, in: self.attractionsTextView)
             })
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .imageIsDownloading
+            .drive(imageActivityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .characterImage
+            .drive(characterImageView.rx.image)
             .disposed(by: disposeBag)
 
     }

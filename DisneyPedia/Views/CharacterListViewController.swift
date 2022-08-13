@@ -57,7 +57,7 @@ class CharacterListViewController: UIViewController, BindableType {
             }
             let coordinator = self.viewModel.sceneCoordinator
             let service = CharacterService()
-            let characterViewModel = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: model.id)
+            let characterViewModel = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: model.id, imageUrl: model.imageUrl ?? "")
             self.viewModel.sceneCoordinator.transition(to: .character(characterViewModel), type: .push, withNavController: false)
         })
         .disposed(by: disposeBag)

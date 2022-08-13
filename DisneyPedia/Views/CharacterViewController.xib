@@ -28,6 +28,7 @@
                 <outlet property="characterNameTileLabel" destination="WQ1-TO-bMm" id="ENl-fQ-zbC"/>
                 <outlet property="filmsTextView" destination="50a-b1-WzQ" id="Sh2-fU-p2L"/>
                 <outlet property="filmsTitleLabel" destination="dVv-ow-q2H" id="tX4-DU-isN"/>
+                <outlet property="imageActivityIndicator" destination="WQl-xZ-3XZ" id="y7S-BD-afl"/>
                 <outlet property="shortsTextView" destination="IWB-9l-vXy" id="hNo-Wf-aA1"/>
                 <outlet property="shortsTitleLabel" destination="Mbf-Vl-Gmn" id="yLR-n2-svb"/>
                 <outlet property="tvShowsTextView" destination="MDd-dk-MYz" id="edB-D6-SgB"/>
@@ -57,17 +58,22 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDu-dV-blO">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-wu-yWb">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-wu-yWb">
                                                             <rect key="frame" x="134.5" y="16" width="145" height="145"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Nrm-wu-yWb" secondAttribute="height" multiplier="1:1" id="10D-Cf-Gea"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WQl-xZ-3XZ">
+                                                            <rect key="frame" x="197" y="78.5" width="20" height="20"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     <constraints>
                                                         <constraint firstItem="Nrm-wu-yWb" firstAttribute="top" secondItem="EDu-dV-blO" secondAttribute="top" constant="16" id="0mR-yM-yol"/>
                                                         <constraint firstItem="Nrm-wu-yWb" firstAttribute="centerX" secondItem="EDu-dV-blO" secondAttribute="centerX" id="E8k-Zc-xxg"/>
+                                                        <constraint firstItem="WQl-xZ-3XZ" firstAttribute="centerY" secondItem="Nrm-wu-yWb" secondAttribute="centerY" id="vU2-Ax-Cpj"/>
+                                                        <constraint firstItem="WQl-xZ-3XZ" firstAttribute="centerX" secondItem="Nrm-wu-yWb" secondAttribute="centerX" id="xcq-Fp-G5c"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-Jb-FGI">
