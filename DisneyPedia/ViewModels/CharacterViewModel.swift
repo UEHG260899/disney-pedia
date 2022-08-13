@@ -9,13 +9,16 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct CharacterViewModel {
+class CharacterViewModel {
     
     let service: CharacterServiceType
     let coordinator: SceneCoordinatorType
     let characterId: Int64
+    let imageUrl: String
     let character: Driver<DisneyCharacter>
     let taskIsRunning: Driver<Bool>
+    let imageIsDownloading: Driver<Bool>
+    let characterImage: Driver<UIImage>
     let films: Driver<[String]>
     let shortFilms: Driver<[String]>
     let videoGames: Driver<[String]>
@@ -27,10 +30,11 @@ struct CharacterViewModel {
     let shouldHideVideoGames: Driver<Bool>
     let shouldHideAttractions: Driver<Bool>
     
-    init(characterService: CharacterServiceType, coordinator: SceneCoordinatorType, characterId: Int64) {
+    init(characterService: CharacterServiceType, coordinator: SceneCoordinatorType, characterId: Int64, imageUrl: String) {
         self.service = characterService
         self.coordinator = coordinator
         self.characterId = characterId
+        self.imageUrl = imageUrl
         
         self.character = service.character(id: characterId)
             .asDriver(onErrorJustReturn: .mock)
@@ -75,6 +79,22 @@ struct CharacterViewModel {
         
         self.shouldHideAttractions = self.attractions
             .map { _ in false }
+                
+        self.characterImage = self.service.image(for: imageUrl)
+            .flatMap({ data -> Observable<UIImage> in
+                let image = UIImage(data: data)
+
+                guard let image = image else {
+                    return Observable.of(UIImage(systemName: "questionmark.circle")!)
+                }
+                
+                return Observable.of(image)
+            })
+            .asDriver(onErrorJustReturn: UIImage())
+        
+        self.imageIsDownloading = self.characterImage
+            .map { _ in false }
+            .startWith(true)
     }
     
 }

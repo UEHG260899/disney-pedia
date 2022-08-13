@@ -20,7 +20,7 @@ class CharacterViewModelTests: XCTestCase {
         super.setUp()
         service = CharacterService()
         coordinator = SceneCoordinatorMock()
-        sut = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4288)
+        sut = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4288, imageUrl: "")
     }
     
     override func tearDown() {
@@ -64,7 +64,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfCharacterObservableEmitsMockDataOnError() {
         // given
-        let sutWithError = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 1)
+        let sutWithError = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 1, imageUrl: "")
         
         // when
         let character = try! sutWithError.character.toBlocking().first()
@@ -75,7 +75,7 @@ class CharacterViewModelTests: XCTestCase {
         
     func testIfShouldHideFilmsEmmitsFalseWhenCharacterHasFilms() {
         // given
-        let sutWithFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 938)
+        let sutWithFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 938, imageUrl: "")
         
         // when
         let value = try! sutWithFilms.shouldHideFilms.toBlocking().first()
@@ -86,7 +86,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldShowFilmsDoesntEmmitsWhenCharacterDoesntHaveFilms() {
         // given
-        let sutWithFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 542)
+        let sutWithFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 542, imageUrl: "")
         
         // when
         let value = try! sutWithFilms.shouldHideFilms.toBlocking().first()
@@ -97,7 +97,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldHideShortFilmsEmmitsFalseWhenCharacterHasShortFilms() {
         // given
-        let sutWithShortFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4324)
+        let sutWithShortFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4324, imageUrl: "")
         
         // when
         let value = try! sutWithShortFilms.shouldHideShortFilms.toBlocking().first()
@@ -108,7 +108,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldHideShortFilmsDoesntEmmitWhenCharacterDoesntHaveShortFilms() {
         // given
-        let sutWithoutShortFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4323)
+        let sutWithoutShortFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4323, imageUrl: "")
         
         // when
         let value = try! sutWithoutShortFilms.shouldHideShortFilms.toBlocking().first()
@@ -119,7 +119,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldHideTvShowsEmmitsFalseWhenCharacterHasTvShows() {
         // given
-        let sutWithTvShows = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4327)
+        let sutWithTvShows = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4327, imageUrl: "")
         
         // when
         let value = try! sutWithTvShows.shouldHideTvShows.toBlocking().first()
@@ -130,7 +130,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldHideTvShowsDoesntEmmitsWhenCharacterDoesntHasTvShows() {
         // given
-        let sutWithoutTvShows = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4329)
+        let sutWithoutTvShows = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4329, imageUrl: "")
         
         // when
         let value = try! sutWithoutTvShows.shouldHideTvShows.toBlocking().first()
@@ -141,7 +141,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldDisplayVideoGamesEmmitsFalseWhenCharacterHasVideoGames() {
         // given
-        let sutWithVideoGames = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4324)
+        let sutWithVideoGames = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4324, imageUrl: "")
         
         // when
         let value = try! sutWithVideoGames.shouldHideVideoGames.toBlocking().first()
@@ -152,7 +152,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldDisplayVideoGamesDoesntEmmitsWhenCharacterDoesntHaveVideoGames() {
         // given
-        let sutWithoutVideoGames = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4325)
+        let sutWithoutVideoGames = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4325, imageUrl: "")
         
         // when
         let value = try! sutWithoutVideoGames.shouldHideVideoGames.toBlocking().first()
@@ -163,7 +163,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldHideAttractionsEmmitsFalseWhenCharacterHasAttractions() {
         // given
-        let sutWithAttractions = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4310)
+        let sutWithAttractions = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4310, imageUrl: "")
         
         // when
         let value = try! sutWithAttractions.shouldHideAttractions.toBlocking().first()
@@ -175,7 +175,7 @@ class CharacterViewModelTests: XCTestCase {
     
     func testIfShouldHideAttractionsDoesntEmmitWhenCharacterDoesntHaveAttractions() {
         // given
-        let sutWithoutAttractions = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4288)
+        let sutWithoutAttractions = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4288, imageUrl: "")
         
         // when
         let value = try! sutWithoutAttractions.shouldHideAttractions.toBlocking().first()
@@ -184,4 +184,13 @@ class CharacterViewModelTests: XCTestCase {
         XCTAssertNil(value)
     }
 
+    
+    func testIfImageDownloadingEmmitsTrueByDefault() {
+        // given
+        let value = try! sut.imageIsDownloading.toBlocking().first()
+        
+        // then
+        XCTAssertTrue(value!)
+    }
+    
 }
