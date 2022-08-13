@@ -18,8 +18,13 @@ class CharacterViewController: UIViewController, BindableType {
     @IBOutlet weak var characterNameLabel: UILabel!
     // Should be hidden by default to work properly
     @IBOutlet weak var filmsTitleLabel: UILabel!
-    @IBOutlet weak var filmsStackView: UIStackView!
-    
+    @IBOutlet weak var filmsTextView: UITextView!
+    @IBOutlet weak var shortsTitleLabel: UILabel!
+    @IBOutlet weak var shortsTextView: UITextView!
+    @IBOutlet weak var tvShowsTitleLabel: UILabel!
+    @IBOutlet weak var tvShowsTextView: UITextView!
+    @IBOutlet weak var videoGamesTitleLabel: UILabel!
+    @IBOutlet weak var videoGamesTextView: UITextView!
     
     private var disposeBag = DisposeBag()
     var viewModel: CharacterViewModel!
@@ -66,25 +71,91 @@ class CharacterViewController: UIViewController, BindableType {
         viewModel
             .character
             .map(\.name)
-            .drive(self.rx.title)
+            .drive(self.rx.title, characterNameLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        viewModel
+            .shouldHideFilms
+            .drive(filmsTitleLabel.rx.isHidden, filmsTextView.rx.isHidden)
+            .disposed(by: disposeBag)
+
+        viewModel
+            .films
+            .drive(onNext: { [weak self] films in
+                
+                guard let self = self else {
+                    return
+                }
+                
+                self.display(films, in: self.filmsTextView)
+            })
             .disposed(by: disposeBag)
         
         viewModel
-            .character
-            .map(\.name)
-            .drive(characterNameLabel.rx.text)
+            .shouldHideShortFilms
+            .drive(shortsTitleLabel.rx.isHidden, shortsTextView.rx.isHidden)
             .disposed(by: disposeBag)
                 
         viewModel
-            .shouldHideFilms
-            .drive(filmsTitleLabel.rx.isHidden)
+            .shortFilms
+            .drive(onNext: { [weak self] shortFilms in
+                guard let self = self else {
+                    return
+                }
+                
+                self.display(shortFilms, in: self.shortsTextView)
+            })
+            .disposed(by: disposeBag)
+        
+        
+        viewModel
+            .shouldHideTvShows
+            .drive(tvShowsTextView.rx.isHidden, tvShowsTitleLabel.rx.isHidden)
             .disposed(by: disposeBag)
         
         viewModel
-            .shouldHideFilms
-            .drive(filmsStackView.rx.isHidden)
+            .tvShows
+            .drive(onNext: { [weak self] tvShows in
+                guard let self = self else {
+                    return
+                }
+                
+                self.display(tvShows, in: self.tvShowsTextView)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .shouldHideVideoGames
+            .drive(videoGamesTitleLabel.rx.isHidden, videoGamesTextView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .videoGames
+            .drive(onNext: { [weak self] videoGames in
+                guard let self = self else {
+                    return
+                }
+                
+                self.display(videoGames, in: self.videoGamesTextView)
+            })
             .disposed(by: disposeBag)
 
+    }
+    
+    private func display(_ data: [String], in textView: UITextView) {
+        var completeString = ""
+        textView.text = ""
+        
+        for (idx, element) in data.enumerated() {
+            if idx == data.count - 1 {
+                completeString += element
+                break
+            }
+            
+            completeString += "\(element), "
+        }
+        
+        textView.text = completeString
     }
 
 }

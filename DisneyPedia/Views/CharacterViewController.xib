@@ -24,8 +24,14 @@
                 <outlet property="characterImageView" destination="Nrm-wu-yWb" id="68R-RE-F3C"/>
                 <outlet property="characterNameLabel" destination="E0h-zd-xTw" id="eSN-P5-kvC"/>
                 <outlet property="characterNameTileLabel" destination="WQ1-TO-bMm" id="ENl-fQ-zbC"/>
-                <outlet property="filmsStackView" destination="Pzz-bB-FJp" id="cSu-Eq-zsS"/>
+                <outlet property="filmsTextView" destination="50a-b1-WzQ" id="Sh2-fU-p2L"/>
                 <outlet property="filmsTitleLabel" destination="dVv-ow-q2H" id="tX4-DU-isN"/>
+                <outlet property="shortsTextView" destination="IWB-9l-vXy" id="hNo-Wf-aA1"/>
+                <outlet property="shortsTitleLabel" destination="Mbf-Vl-Gmn" id="yLR-n2-svb"/>
+                <outlet property="tvShowsTextView" destination="MDd-dk-MYz" id="edB-D6-SgB"/>
+                <outlet property="tvShowsTitleLabel" destination="NdO-u0-p8U" id="9ye-ZK-gzO"/>
+                <outlet property="videoGamesTextView" destination="36p-65-DDe" id="M1C-NZ-QR3"/>
+                <outlet property="videoGamesTitleLabel" destination="cz6-5P-YBg" id="GJ0-W8-vAy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -97,22 +103,52 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pzz-bB-FJp">
+                                                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Test" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50a-b1-WzQ">
                                                                     <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubk-9U-O1F">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-gW-vck">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
-                                                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                </stackView>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="textColor" systemColor="labelColor"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cortos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbf-Vl-Gmn">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo-Bold" family="Lobster Two" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Test" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWB-9l-vXy">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="textColor" systemColor="labelColor"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programas de Televisión:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdO-u0-p8U">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo-Bold" family="Lobster Two" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Test" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDd-dk-MYz">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="textColor" systemColor="labelColor"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Juegos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cz6-5P-YBg">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo-Bold" family="Lobster Two" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Test" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36p-65-DDe">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="textColor" systemColor="labelColor"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
                                                             </subviews>
                                                         </stackView>
                                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-JR-xHS">
@@ -184,6 +220,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

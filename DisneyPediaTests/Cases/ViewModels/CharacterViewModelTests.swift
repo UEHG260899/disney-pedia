@@ -84,12 +84,78 @@ class CharacterViewModelTests: XCTestCase {
         XCTAssertFalse(value!)
     }
     
-    func testIfShouldShowFilmsDoesntEmmitseWhenCharacterDoesntHaveFilms() {
+    func testIfShouldShowFilmsDoesntEmmitsWhenCharacterDoesntHaveFilms() {
         // given
         let sutWithFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 542)
         
         // when
         let value = try! sutWithFilms.shouldHideFilms.toBlocking().first()
+        
+        // then
+        XCTAssertNil(value)
+    }
+    
+    func testIfShouldHideShortFilmsEmmitsFalseWhenCharacterHasShortFilms() {
+        // given
+        let sutWithShortFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4324)
+        
+        // when
+        let value = try! sutWithShortFilms.shouldHideShortFilms.toBlocking().first()
+        
+        // then
+        XCTAssertFalse(value!)
+    }
+    
+    func testIfShouldHideShortFilmsDoesntEmmitWhenCharacterDoesntHaveShortFilms() {
+        // given
+        let sutWithoutShortFilms = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4323)
+        
+        // when
+        let value = try! sutWithoutShortFilms.shouldHideShortFilms.toBlocking().first()
+        
+        // then
+        XCTAssertNil(value)
+    }
+    
+    func testIfShouldHideTvShowsEmmitsFalseWhenCharacterHasTvShows() {
+        // given
+        let sutWithTvShows = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4327)
+        
+        // when
+        let value = try! sutWithTvShows.shouldHideTvShows.toBlocking().first()
+        
+        // then
+        XCTAssertFalse(value!)
+    }
+    
+    func testIfShouldHideTvShowsDoesntEmmitsWhenCharacterDoesntHasTvShows() {
+        // given
+        let sutWithoutTvShows = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4329)
+        
+        // when
+        let value = try! sutWithoutTvShows.shouldHideTvShows.toBlocking().first()
+        
+        // then
+        XCTAssertNil(value)
+    }
+    
+    func testIfShouldDisplayVideoGamesEmmitsFalseWhenCharacterHasVideoGames() {
+        // given
+        let sutWithVideoGames = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4324)
+        
+        // when
+        let value = try! sutWithVideoGames.shouldHideVideoGames.toBlocking().first()
+        
+        // then
+        XCTAssertFalse(value!)
+    }
+    
+    func testIfShouldDisplayVideoGamesDoesntEmmitsWhenCharacterDoesntHaveVideoGames() {
+        // given
+        let sutWithoutVideoGames = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4325)
+        
+        // when
+        let value = try! sutWithoutVideoGames.shouldHideVideoGames.toBlocking().first()
         
         // then
         XCTAssertNil(value)
