@@ -31,6 +31,12 @@
 		A4A93879289F25D0004D25CF /* CharacterListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A93877289F25D0004D25CF /* CharacterListViewController.xib */; };
 		A4A9387D289F263B004D25CF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9387C289F263B004D25CF /* BindableType.swift */; };
 		A4A9387F289F27DB004D25CF /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9387E289F27DB004D25CF /* SceneCoordinator.swift */; };
+		A4BDB1A428A477800019A47A /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDB1A228A477800019A47A /* CharacterViewController.swift */; };
+		A4BDB1A528A477800019A47A /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BDB1A328A477800019A47A /* CharacterViewController.xib */; };
+		A4BDB1A728A4779B0019A47A /* CharacterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDB1A628A4779B0019A47A /* CharacterViewModelTests.swift */; };
+		A4BDB1A928A478630019A47A /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDB1A828A478630019A47A /* CharacterViewModel.swift */; };
+		A4BDB1AB28A4789E0019A47A /* CharacterServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDB1AA28A4789E0019A47A /* CharacterServiceType.swift */; };
+		A4BDB1AD28A4793D0019A47A /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDB1AC28A4793D0019A47A /* CharacterService.swift */; };
 		A4CE50E928A3320600FAF2E0 /* CharacterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE50E828A3320600FAF2E0 /* CharacterCellViewModel.swift */; };
 		A4CE50EB28A3344600FAF2E0 /* CharacterCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE50EA28A3344600FAF2E0 /* CharacterCellViewModelTests.swift */; };
 		A4D4CEED28A01F2200F865BE /* ReuableCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D4CEEC28A01F2200F865BE /* ReuableCellType.swift */; };
@@ -83,6 +89,12 @@
 		A4A93877289F25D0004D25CF /* CharacterListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListViewController.xib; sourceTree = "<group>"; };
 		A4A9387C289F263B004D25CF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		A4A9387E289F27DB004D25CF /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		A4BDB1A228A477800019A47A /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		A4BDB1A328A477800019A47A /* CharacterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
+		A4BDB1A628A4779B0019A47A /* CharacterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModelTests.swift; sourceTree = "<group>"; };
+		A4BDB1A828A478630019A47A /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		A4BDB1AA28A4789E0019A47A /* CharacterServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterServiceType.swift; sourceTree = "<group>"; };
+		A4BDB1AC28A4793D0019A47A /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
 		A4CE50E828A3320600FAF2E0 /* CharacterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModel.swift; sourceTree = "<group>"; };
 		A4CE50EA28A3344600FAF2E0 /* CharacterCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModelTests.swift; sourceTree = "<group>"; };
 		A4D4CEEC28A01F2200F865BE /* ReuableCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuableCellType.swift; sourceTree = "<group>"; };
@@ -176,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A4A784B428A092F1005C9734 /* CharacterListService.swift */,
+				A4BDB1AC28A4793D0019A47A /* CharacterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -204,6 +217,7 @@
 			children = (
 				A4A93870289F24DC004D25CF /* CharacterListViewModelTests.swift */,
 				A4CE50EA28A3344600FAF2E0 /* CharacterCellViewModelTests.swift */,
+				A4BDB1A628A4779B0019A47A /* CharacterViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +227,7 @@
 			children = (
 				A4A93873289F2538004D25CF /* CharacterListViewModel.swift */,
 				A4CE50E828A3320600FAF2E0 /* CharacterCellViewModel.swift */,
+				A4BDB1A828A478630019A47A /* CharacterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -223,6 +238,8 @@
 				A4D4CEEE28A01FB700F865BE /* Components */,
 				A4A93876289F25D0004D25CF /* CharacterListViewController.swift */,
 				A4A93877289F25D0004D25CF /* CharacterListViewController.xib */,
+				A4BDB1A228A477800019A47A /* CharacterViewController.swift */,
+				A4BDB1A328A477800019A47A /* CharacterViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +253,7 @@
 				A4D4CEEC28A01F2200F865BE /* ReuableCellType.swift */,
 				A4A784AF28A08ED0005C9734 /* NetworkServiceType.swift */,
 				A4A784B128A0925F005C9734 /* CharacterListServiceType.swift */,
+				A4BDB1AA28A4789E0019A47A /* CharacterServiceType.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -438,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BDB1A528A477800019A47A /* CharacterViewController.xib in Resources */,
 				A4A9386A289F23C6004D25CF /* LobsterTwo-Regular.ttf in Resources */,
 				A4A93869289F23C6004D25CF /* LobsterTwo-BoldItalic.ttf in Resources */,
 				A4A93879289F25D0004D25CF /* CharacterListViewController.xib in Resources */,
@@ -545,11 +564,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A784B028A08ED0005C9734 /* NetworkServiceType.swift in Sources */,
-
+				A4BDB1A928A478630019A47A /* CharacterViewModel.swift in Sources */,
 				A4CE50E928A3320600FAF2E0 /* CharacterCellViewModel.swift in Sources */,
 				A4D4CEF128A01FD100F865BE /* CharacterCollectionViewCell.swift in Sources */,
 				A4770F5B28A04F960025AC6D /* CharacterList.swift in Sources */,
 				A4E3F0E9289CBF1000BAF6F1 /* Scene.swift in Sources */,
+				A4BDB1AD28A4793D0019A47A /* CharacterService.swift in Sources */,
 				A4770F5D28A050E70025AC6D /* DisneyCharacter.swift in Sources */,
 				A4A9387F289F27DB004D25CF /* SceneCoordinator.swift in Sources */,
 				A4A9387D289F263B004D25CF /* BindableType.swift in Sources */,
@@ -561,6 +581,8 @@
 				A4A93878289F25D0004D25CF /* CharacterListViewController.swift in Sources */,
 				A4E3F0F0289CC2AC00BAF6F1 /* Scene+ViewController.swift in Sources */,
 				A4E3F0EB289CBF6800BAF6F1 /* SceneCoordinatorType.swift in Sources */,
+				A4BDB1AB28A4789E0019A47A /* CharacterServiceType.swift in Sources */,
+				A4BDB1A428A477800019A47A /* CharacterViewController.swift in Sources */,
 				A4A784B228A0925F005C9734 /* CharacterListServiceType.swift in Sources */,
 				A4E3F0ED289CC25700BAF6F1 /* SceneTransitionType.swift in Sources */,
 				A4770F5828A03D9E0025AC6D /* Networker.swift in Sources */,
@@ -577,6 +599,7 @@
 				A4E3F0F6289CC45B00BAF6F1 /* AppConfiguratorTests.swift in Sources */,
 				A4770F5628A03D610025AC6D /* NetworkerTests.swift in Sources */,
 				A4770F6228A056730025AC6D /* CorrectDisneyCharacter.swift in Sources */,
+				A4BDB1A728A4779B0019A47A /* CharacterViewModelTests.swift in Sources */,
 				A4770F6628A056CD0025AC6D /* IncorrectDisneyCharacter.swift in Sources */,
 				A4CE50EB28A3344600FAF2E0 /* CharacterCellViewModelTests.swift in Sources */,
 				A4770F6428A056BE0025AC6D /* IncorrectCharacterList.swift in Sources */,

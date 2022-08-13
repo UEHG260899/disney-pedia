@@ -8,7 +8,6 @@
 import Foundation
 
 enum Scene {
-    // TODO: Remove type Anys
     case characterList(CharacterListViewModel)
-    case character(CharacterViewModel: Any)
+    case character(CharacterViewModel)
 }

@@ -50,6 +50,18 @@ class CharacterListViewController: UIViewController, BindableType {
                 cell.layoutIfNeeded()
             }.disposed(by: disposeBag)
         
+        characterListCollectionView.rx.modelSelected(DisneyCharacter.self).subscribe(onNext: { [weak self] model in
+            
+            guard let self = self else {
+                return
+            }
+            let coordinator = self.viewModel.sceneCoordinator
+            let service = CharacterService()
+            let characterViewModel = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: model.id)
+            self.viewModel.sceneCoordinator.transition(to: .character(characterViewModel), type: .push, withNavController: false)
+        })
+        .disposed(by: disposeBag)
+        
         viewModel.taskIsRunning
             .drive(activityIndicator.rx.isAnimating)
             .disposed(by: disposeBag)
