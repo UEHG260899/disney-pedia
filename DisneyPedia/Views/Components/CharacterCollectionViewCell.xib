@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LobsterTwo-Regular.ttf">
+            <string>LobsterTwo</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CharacterCollectionViewCell" customModule="DisneyPedia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="291"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="291"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A73-7l-Txe">
+                        <rect key="frame" x="10" y="10" width="295" height="271"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ1-Gr-c5R">
+                                <rect key="frame" x="0.0" y="135.5" width="295" height="135.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mickey Mouse" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EIg-1H-LgG">
+                                        <rect key="frame" x="5" y="74.5" width="285" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EIg-1H-LgG" secondAttribute="bottom" constant="5" id="2EN-lY-8dk"/>
+                                    <constraint firstItem="EIg-1H-LgG" firstAttribute="leading" secondItem="gZ1-Gr-c5R" secondAttribute="leading" constant="5" id="ELg-52-3ug"/>
+                                    <constraint firstItem="EIg-1H-LgG" firstAttribute="centerX" secondItem="gZ1-Gr-c5R" secondAttribute="centerX" id="gk5-1e-fyz"/>
+                                    <constraint firstAttribute="trailing" secondItem="EIg-1H-LgG" secondAttribute="trailing" constant="5" id="sSi-vv-ubW"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JZr-mu-Z2W">
+                                <rect key="frame" x="103.5" y="92" width="88.5" height="87.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JZr-mu-Z2W" secondAttribute="height" multiplier="1:1" id="yDw-Is-rTv"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="C14-oW-XNB">
+                                <rect key="frame" x="129" y="117" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C14-oW-XNB" firstAttribute="centerY" secondItem="JZr-mu-Z2W" secondAttribute="centerY" id="4tZ-Eh-QMD"/>
+                            <constraint firstItem="EIg-1H-LgG" firstAttribute="top" secondItem="JZr-mu-Z2W" secondAttribute="bottom" constant="30" id="Bof-fy-4SY"/>
+                            <constraint firstItem="gZ1-Gr-c5R" firstAttribute="height" secondItem="A73-7l-Txe" secondAttribute="height" multiplier="0.5" id="E52-fh-oaI"/>
+                            <constraint firstAttribute="bottom" secondItem="gZ1-Gr-c5R" secondAttribute="bottom" id="Fwz-g4-BWo"/>
+                            <constraint firstItem="JZr-mu-Z2W" firstAttribute="width" secondItem="A73-7l-Txe" secondAttribute="width" multiplier="0.3" id="I3L-dO-boM"/>
+                            <constraint firstItem="JZr-mu-Z2W" firstAttribute="centerX" secondItem="gZ1-Gr-c5R" secondAttribute="centerX" id="ITD-38-HUq"/>
+                            <constraint firstItem="JZr-mu-Z2W" firstAttribute="centerY" secondItem="A73-7l-Txe" secondAttribute="centerY" id="TId-tl-XMH"/>
+                            <constraint firstItem="gZ1-Gr-c5R" firstAttribute="leading" secondItem="A73-7l-Txe" secondAttribute="leading" id="VPO-uf-bhQ"/>
+                            <constraint firstItem="C14-oW-XNB" firstAttribute="centerX" secondItem="JZr-mu-Z2W" secondAttribute="centerX" id="gsh-Tu-dsU"/>
+                            <constraint firstAttribute="trailing" secondItem="gZ1-Gr-c5R" secondAttribute="trailing" id="qJX-K4-ESZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="A73-7l-Txe" secondAttribute="trailing" constant="10" id="LyY-kP-uzc"/>
+                <constraint firstAttribute="bottom" secondItem="A73-7l-Txe" secondAttribute="bottom" constant="10" id="PWr-fx-PTd"/>
+                <constraint firstItem="A73-7l-Txe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="lZA-K4-KgO"/>
+                <constraint firstItem="A73-7l-Txe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="uuj-FE-MeG"/>
+            </constraints>
+            <size key="customSize" width="315" height="291"/>
+            <connections>
+                <outlet property="activityIndicator" destination="C14-oW-XNB" id="nag-5H-TXa"/>
+                <outlet property="bottomView" destination="gZ1-Gr-c5R" id="vj8-EL-VhT"/>
+                <outlet property="cardView" destination="A73-7l-Txe" id="ztl-Fs-Lhn"/>
+                <outlet property="characterImageView" destination="JZr-mu-Z2W" id="xbT-pk-iGu"/>
+                <outlet property="characterNameLabel" destination="EIg-1H-LgG" id="7YS-kF-j6Y"/>
+            </connections>
+            <point key="canvasLocation" x="323.91304347826087" y="178.45982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

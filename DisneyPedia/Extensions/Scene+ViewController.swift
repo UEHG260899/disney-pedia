@@ -15,8 +15,9 @@ extension Scene {
             vc.bindViewModel(to: characterListViewModel)
             return vc
         case .character(let characterViewModel):
-            // TODO: Instanciate CharacterViewModel
-            return UIViewController()
+            let vc = CharacterViewController(nibName: "CharacterViewController", bundle: .main)
+            vc.bindViewModel(to: characterViewModel)
+            return vc
         }
     }
 }

@@ -40,6 +40,13 @@ class SceneCoordinator: SceneCoordinatorType {
             window.rootViewController = viewController
             subject.onCompleted()
         case .push:
+            guard let navigationController = currentViewController.navigationController else {
+                fatalError()
+            }
+            
+            navigationController.pushViewController(viewController, animated: true)
+            currentViewController = viewController
+            
             subject.onCompleted()
         case .modal:
             subject.onCompleted()
@@ -54,9 +61,30 @@ class SceneCoordinator: SceneCoordinatorType {
     
     @discardableResult
     func pop(animated: Bool) -> Completable {
-        return Completable.create { completable in
-            return Disposables.create()
+        let subject = PublishSubject<Void>()
+        
+        if let presenter = currentViewController.presentingViewController {
+            
+            currentViewController.dismiss(animated: animated) {
+                self.currentViewController = presenter
+                subject.onCompleted()
+            }
+            
+        } else if let navController = currentViewController.navigationController {
+            
+            guard navController.popViewController(animated: animated) != nil else {
+                fatalError("can´t pop view controller")
+            }
+            
+            currentViewController = navController.viewControllers[navController.viewControllers.count - 1]
+            subject.onCompleted()
         }
+        
+        return subject
+            .asObservable()
+            .take(1)
+            .ignoreElements()
+            .asCompletable()
     }
     
     
