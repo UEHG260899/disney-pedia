@@ -20,6 +20,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterViewController" customModule="DisneyPedia" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="8cD-JR-xHS" id="mWg-48-4FV"/>
+                <outlet property="attractionsTextView" destination="eWy-cs-WvU" id="BfY-0e-OGn"/>
+                <outlet property="attractionsTitleLabel" destination="gVM-NR-TL9" id="c0G-Q8-AZ7"/>
                 <outlet property="cardView" destination="7cN-Jb-FGI" id="54q-RL-AWz"/>
                 <outlet property="characterImageView" destination="Nrm-wu-yWb" id="68R-RE-F3C"/>
                 <outlet property="characterNameLabel" destination="E0h-zd-xTw" id="eSN-P5-kvC"/>
@@ -149,6 +151,19 @@
                                                                     <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
+                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atracciones:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-NR-TL9">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo-Bold" family="Lobster Two" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Test" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-cs-WvU">
+                                                                    <rect key="frame" x="0.0" y="53" width="398" height="0.0"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="textColor" systemColor="labelColor"/>
+                                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
                                                             </subviews>
                                                         </stackView>
                                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-JR-xHS">
@@ -184,14 +199,14 @@
                                     </constraints>
                                 </scrollView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="uyt-qb-opF" secondAttribute="bottom" id="EPv-vC-lq7"/>
                                 <constraint firstItem="uyt-qb-opF" firstAttribute="top" secondItem="asq-w8-MgT" secondAttribute="top" id="NnY-aQ-91H"/>
                                 <constraint firstAttribute="trailing" secondItem="uyt-qb-opF" secondAttribute="trailing" id="U8d-nf-amb"/>
                                 <constraint firstItem="Jwg-oq-OKN" firstAttribute="width" secondItem="asq-w8-MgT" secondAttribute="width" id="UCK-oB-XBn"/>
                                 <constraint firstItem="Jwg-oq-OKN" firstAttribute="height" secondItem="asq-w8-MgT" secondAttribute="height" priority="250" id="Ucp-2V-7AM"/>
                                 <constraint firstItem="uyt-qb-opF" firstAttribute="leading" secondItem="asq-w8-MgT" secondAttribute="leading" id="cQW-hf-8Xl"/>
+                                <constraint firstAttribute="bottom" secondItem="uyt-qb-opF" secondAttribute="bottom" id="gHY-I3-xIl"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -216,7 +231,7 @@
                 <constraint firstItem="8cD-JR-xHS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="nVR-Da-Xdl"/>
                 <constraint firstItem="8cD-JR-xHS" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="raq-jN-yzc"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="98"/>
+            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
         </view>
     </objects>
     <resources>

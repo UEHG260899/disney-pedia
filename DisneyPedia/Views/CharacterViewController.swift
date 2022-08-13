@@ -25,6 +25,8 @@ class CharacterViewController: UIViewController, BindableType {
     @IBOutlet weak var tvShowsTextView: UITextView!
     @IBOutlet weak var videoGamesTitleLabel: UILabel!
     @IBOutlet weak var videoGamesTextView: UITextView!
+    @IBOutlet weak var attractionsTitleLabel: UILabel!
+    @IBOutlet weak var attractionsTextView: UITextView!
     
     private var disposeBag = DisposeBag()
     var viewModel: CharacterViewModel!
@@ -137,6 +139,22 @@ class CharacterViewController: UIViewController, BindableType {
                 }
                 
                 self.display(videoGames, in: self.videoGamesTextView)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .shouldHideAttractions
+            .drive(attractionsTitleLabel.rx.isHidden, attractionsTextView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .attractions
+            .drive(onNext: { [weak self] attractions in
+                guard let self = self else {
+                    return
+                }
+                
+                self.display(attractions, in: self.attractionsTextView)
             })
             .disposed(by: disposeBag)
 

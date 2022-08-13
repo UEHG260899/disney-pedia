@@ -160,5 +160,28 @@ class CharacterViewModelTests: XCTestCase {
         // then
         XCTAssertNil(value)
     }
+    
+    func testIfShouldHideAttractionsEmmitsFalseWhenCharacterHasAttractions() {
+        // given
+        let sutWithAttractions = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4310)
+        
+        // when
+        let value = try! sutWithAttractions.shouldHideAttractions.toBlocking().first()
+        
+        // then
+        XCTAssertFalse(value!)
+    }
+
+    
+    func testIfShouldHideAttractionsDoesntEmmitWhenCharacterDoesntHaveAttractions() {
+        // given
+        let sutWithoutAttractions = CharacterViewModel(characterService: service, coordinator: coordinator, characterId: 4288)
+        
+        // when
+        let value = try! sutWithoutAttractions.shouldHideAttractions.toBlocking().first()
+        
+        // then
+        XCTAssertNil(value)
+    }
 
 }

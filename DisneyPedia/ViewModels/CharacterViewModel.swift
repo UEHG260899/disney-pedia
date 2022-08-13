@@ -20,10 +20,12 @@ struct CharacterViewModel {
     let shortFilms: Driver<[String]>
     let videoGames: Driver<[String]>
     let tvShows: Driver<[String]>
+    let attractions: Driver<[String]>
     let shouldHideFilms: Driver<Bool>
     let shouldHideShortFilms: Driver<Bool>
     let shouldHideTvShows: Driver<Bool>
     let shouldHideVideoGames: Driver<Bool>
+    let shouldHideAttractions: Driver<Bool>
     
     init(characterService: CharacterServiceType, coordinator: SceneCoordinatorType, characterId: Int64) {
         self.service = characterService
@@ -65,6 +67,13 @@ struct CharacterViewModel {
             .filter { !$0.isEmpty }
         
         self.shouldHideVideoGames = self.videoGames
+            .map { _ in false }
+        
+        self.attractions = self.character
+            .map(\.parkAttractions)
+            .filter { !$0.isEmpty }
+        
+        self.shouldHideAttractions = self.attractions
             .map { _ in false }
     }
     
